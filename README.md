@@ -51,7 +51,19 @@ While the NIBRS row-level data can technically be [downloaded](https://www.icpsr
 
 If anyone knows how to download NIBRS data specific to a certain city, please lmk [@SebbyStats](https://x.com/sebbystats). 
 
-In order make comparisons of crime rates between 2011-2021 (which uses UCR) and 2022-2023, homicides are used as a proxy. Because homicides are at the top of UCR heirarchy, an incident that involves a homicide should ALWAYS have that respective incident be marked as homicide. Homicide data for 2022-2023 was taken from the [Crime Statistics 2022 vs 2023: January - December](https://www.sa.gov/files/assets/main/v/1/sapd/nibrs/crime-statistics-2022vs2023-jan-dec.pdf). 
+In order make comparisons of crime rates between 2011-2021 (which uses UCR) and 2022-2023, homicides are used as a proxy. Because homicides are at the top of UCR heirarchy, an incident that involves a homicide should ALWAYS have that respective incident be marked as homicide. Homicide data for 2022-2023 was taken from the [Crime Statistics 2022 vs 2023: January - December](https://www.sa.gov/files/assets/main/v/1/sapd/nibrs/crime-statistics-2022vs2023-jan-dec.pdf) report.
+
+### San Diego, CA
+
+Crime stats for 2010-2022 was reported using the UCR system, found [here](https://www.sandiego.gov/sites/default/files/crime-actuals1950-2022.pdf). 
+
+For 2023 San Diego PD switched over to NIBRS. Stats can be found [here](https://www.sandiego.gov/sites/default/files/2024-02/2023cumneighborhood.pdf)
+
+Similar to San Antonio, in order to bridge the gap between 2010-2022 (UCR) and 2023 (NIBRS), homicide was used as a proxy. 
+
+### Dallas, TX
+
+Dallas PD only provides aggregate NIBRS data for 2023. Similar to San Antonio, row-level NIBRS data would presumably need to be downloaded and filtered from nationwide NIBRS. Due to storage limitations this cannot be done. 
 
 
 
