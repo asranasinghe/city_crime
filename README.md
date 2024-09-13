@@ -65,7 +65,13 @@ Similar to San Antonio, in order to bridge the gap between 2010-2022 (UCR) and 2
 
 Dallas PD only provides aggregate NIBRS data for 2023. Similar to San Antonio, row-level NIBRS data would presumably need to be downloaded and filtered from nationwide NIBRS. Due to storage limitations this cannot be done. 
 
+### Jacksonville, FL
 
+Jacksonville Sheriff's Office does not provide data aggregates. Row-level UCR and NIBRS data would presumably need to be downloaded and filtered from nationwide NIBRS. Due to storage limitations this cannot be done. 
+
+### Austin, TX
+
+ADP switch to NIBRS reporting beginning in January 2021. Row-level NIBRS Group A Offense Crime data can be downloaded [here](https://datahub.austintexas.gov/widgets/i7fg-wrk5?mobile_redirect=true). 
 
 
 
