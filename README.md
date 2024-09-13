@@ -73,8 +73,9 @@ Jacksonville Sheriff's Office does not provide data aggregates. Row-level UCR an
 
 ADP switch to NIBRS reporting beginning in January 2021. Row-level NIBRS Group A Offense Crime data can be downloaded [here](https://datahub.austintexas.gov/widgets/i7fg-wrk5?mobile_redirect=true). 
 
+### Dallas,TX
 
-
+DWPD transitioned to NIBRS in 2005. 
 
 
 
