@@ -9,7 +9,48 @@ To get a general feel of what direction crime rates are moving in, I look at 10 
 
 ## II. Cities + Raw Data Sources
 
-Below is a list of the cities looked at and the their respective sources for crime stats. 
+The top 25 most populated cities in the U.S. according to [Wikipedia](https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population) were looked at as part of this analysis. See below for the listing:
+
+| City | 2023 Population Estimate |
+| :-----------    |   :-----------:  |
+| New York, NY | 8,258,035 |
+| Los Angeles, CA | 3,820,914 |
+| Chicago, IL | 2,664,452 |
+| Houston, TX | 2,314,157 |
+| Phoenix, AZ | 1,650,070 |
+| Philadelphia, PA | 1,550,542 |
+| San Antonio, TX | 1,495,295 |
+| San Diego, CA | 1,388,320 |
+| Dallas, TX | 1,302,868 |
+| Jacksonville, FL | 985,843 |
+| Austin, TX | 979,882 |
+| Fort Worth, TX | 978,468 |
+| San Jose, CA | 969,655 |
+| Columbus, OH | 913,175 |
+| Charlotte, NC | 911,311 |
+| Indianapolis, IN | 879,293 |
+| San Francisco, CA | 808,988 |
+| Seattle, WA | 755,078 |
+| Denver, CO | 716,577 |
+| Oklahoma City, OK | 702,767 |
+| Nashville, TN | 687,788 |
+| Washington, DC | 678,972 |
+| El Paso, TX | 678,958 |
+| Las Vegas, NV | 660,929 |
+| Boston, MA | 653,833 |
+
+
+## III. Raw Data Sources
+
+The crime stats for each city are compiled using either UCR or NIBRS (see "Section III. About UCR-NIBRS + Bridging the Gap" for more info) protocols, depending on the year. 
+
+Crime statistics have historically been reported using the [Uniform Crime Report (UCR)](https://ucr.fbi.gov/additional-ucr-publications/ucr_handbook.pdf) guidelines. In more recent years many police agencies have transitioned to using the [National Incident-Based Reporting System](https://bjs.ojp.gov/sites/g/files/xyckuh236/files/sarble/data_common/nibrs-user-manual-2021-1041521.pdf). Crime stats for each city could have been compiled by either of these protocols, depending on the year. These two reporting methodologies alone cannot be compared to one another as there are significant differences in the way wherein crime stats are compiled, summarized [here](https://www.centralsquare.com/resources/articles/nibrs-survival-kit-an-in-depth-look-at-how-nibrs-differs-from-ucr). See "Section IV. Methodology" for more information on adjustments made to UCR and NIBRS data to make them more comparable. 
+
+Moreover the actual place wherein the stats were pulled from are either in official publications found on a given police department website, and/or from the [National Archive of Criminal Justice Data (NACJD)](https://www.icpsr.umich.edu/web/pages/NACJD/index.html). 
+
+This means that sometimes there can be two sets of data for the same reporting year. For example, a given police department may have its own annual crime report for 2023 that is based on NIBRS, AND also have reported their 2023 NIBRS data to the FBI, which can be found in the NACJD NIBRS data extracts. Theoretically these numbers should be the same, however if there are differences the police department official publications will take precedence. 
+
+Below is a list of respective data sources for each city. 
 
 ### 1. New York City, NY
 
@@ -38,7 +79,7 @@ For some reason annual reports for 2012-2016 are not available. There are some r
 | 2019-2023       | NIBRS            | [Monthly Crime Data By Street and Police Beat](https://www.houstontx.gov/police/cs/Monthly_Crime_Data_by_Street_and_Police_Beat.htm)
 | 2012-2018       | UCR              | [Monthly Historical Files](https://www.houstontx.gov/police/cs/crime-stats-archives.htm)
 
-For information on how the differing reporting protocols were reconciled, see "Section III. Standardizing UCR-NIBRS Reporting Differences". 
+For information on how the differing reporting protocols were reconciled, see "Section III. About UCR-NIBRS + Bridging the Gap". 
 
 ### 5. Phoenix, AZ
 
@@ -64,7 +105,7 @@ NOTE: Year End Reports were not available for 2012, 2013, 2020. Instead the late
 | 2022-2023       | NIBRS            | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128); Filtered for San Antonio only
 | 2011-2021       | UCR              | [sapd-ucrs-2011-2021.pdf](https://www.sa.gov/files/assets/main/v/1/sapd/sapd-ucrs-2011-2021.pdf). 
 
-For information on how the differing reporting protocols were reconciled, see "Section III. Standardizing UCR-NIBRS Reporting Differences". 
+For information on how the differing reporting protocols were reconciled, see "Section IV. Methodology". 
 
 For additional verification of NIBRS data, official department publications of homicide data for 2022-2023 was taken from the [Crime Statistics 2022 vs 2023: January - December](https://www.sa.gov/files/assets/main/v/1/sapd/nibrs/crime-statistics-2022vs2023-jan-dec.pdf) report.
 
@@ -75,7 +116,7 @@ For additional verification of NIBRS data, official department publications of h
 | 2023            | NIBRS            | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128); Filtered for San Antonio only
 | 2010-2022       | UCR              | [San Diego Historical Crime Actuals 1950-2022](https://www.sandiego.gov/sites/default/files/crime-actuals1950-2022.pdf). 
 
-For information on how the differing reporting protocols were reconciled, see "Section III. Standardizing UCR-NIBRS Reporting Differences". 
+For information on how the differing reporting protocols were reconciled, see "Section IV. About UCR-NIBRS + Bridging the Gap". 
 
 For additional verification of NIBRS data, official department publications of homicide data for 2023 was taken from the [Crime Against Persons January-December 2023](https://www.sandiego.gov/sites/default/files/2024-02/2023cumneighborhood.pdf) report. 
 
@@ -84,6 +125,8 @@ For additional verification of NIBRS data, official department publications of h
 | Year(s)         | Reporting Format |             Source              |
 | :-----------    |   :-----------:  |          :-----------:          |
 | 2010-2023       | NIBRS            | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128); Filtered for Dallas only
+
+--NEED TO CHECK--
 
 ### 10. Jacksonville, FL
 
@@ -96,7 +139,7 @@ Jacksonville Sheriff's Office does not provide data aggregates. Row-level UCR an
 | 2021-2023       | NIBRS            | [Crime Reports]([https://datahub.austintexas.gov/widgets/i7fg-wrk5?mobile_redirect=true)](https://data.austintexas.gov/Public-Safety/Crime-Reports/fdj4-gpfu/data_preview))
 | 2012-2020       | UCR              | [Crime Reports]([https://datahub.austintexas.gov/widgets/i7fg-wrk5?mobile_redirect=true)](https://data.austintexas.gov/Public-Safety/Crime-Reports/fdj4-gpfu/data_preview))
 
-For information on how the differing reporting protocols were reconciled, see "Section III. Standardizing UCR-NIBRS Reporting Differences". 
+For information on how the differing reporting protocols were reconciled, see "Section IV. Methodology". 
 
 ### 12. Fort Worth,TX
 
@@ -104,7 +147,7 @@ For information on how the differing reporting protocols were reconciled, see "S
 | :-----------    |   :-----------:  |          :-----------:          |
 | 2010-2023       | NIBRS            | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128); Filtered for Dallas only
 
-Dallas switched over to NIBRS in 2005. 
+--NEED TO CHECK--
 
 ### 13. San Jose, CA
 
@@ -119,7 +162,9 @@ Columbus crime stats uses UCR reporting and is available via the [OIBRS](https:/
 CMPD reports
 
 
-## III. Standardizing UCR-NIBRS Reporting Differences
+## IV. Methodology
+
+
 
 Another way in which UCR data can be compared to NIBRS is by using homicides as a proxy. Because homicides are at the top of UCR heirarchy, an incident that involves a homicide should ALWAYS have that respective incident be marked as homicide. 
 
