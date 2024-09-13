@@ -7,7 +7,7 @@ Ahead of the 2024 presidential election, crime has been a contentious topic. Dem
 To get a general feel of what direction crime rates are moving in, I look at 10 largest cities in the U.S. and compile/analyze data provided by their respective police departments. 
 
 
-## II. Cities + Raw Data Sources
+## II. Cities
 
 The top 25 most populated cities in the U.S. according to [Wikipedia](https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population) were looked at as part of this analysis. See below for the listing:
 
@@ -46,17 +46,17 @@ The crime stats for each city are compiled using either UCR or NIBRS (see "Secti
 
 Crime statistics have historically been reported using the [Uniform Crime Report (UCR)](https://ucr.fbi.gov/additional-ucr-publications/ucr_handbook.pdf) guidelines. In more recent years many police agencies have transitioned to using the [National Incident-Based Reporting System](https://bjs.ojp.gov/sites/g/files/xyckuh236/files/sarble/data_common/nibrs-user-manual-2021-1041521.pdf). Crime stats for each city could have been compiled by either of these protocols, depending on the year. These two reporting methodologies alone cannot be compared to one another as there are significant differences in the way wherein crime stats are compiled, summarized [here](https://www.centralsquare.com/resources/articles/nibrs-survival-kit-an-in-depth-look-at-how-nibrs-differs-from-ucr). See "Section IV. Methodology" for more information on adjustments made to UCR and NIBRS data to make them more comparable. 
 
-Moreover the actual place wherein the stats were pulled from are either in official publications found on a given police department website, and/or from the [National Archive of Criminal Justice Data (NACJD)](https://www.icpsr.umich.edu/web/pages/NACJD/index.html). 
+Moreover the actual place wherein the stats were pulled from are either in official publications found on a given police department website, and/or from resources provided by the FBI such as the [Crime Data Explorer](https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/explorer/crime/crime-trend) or the [National Archive of Criminal Justice Data (NACJD)](https://www.icpsr.umich.edu/web/pages/NACJD/index.html). 
 
-This means that sometimes there can be two sets of data for the same reporting year. For example, a given police department may have its own annual crime report for 2023 that is based on NIBRS, AND also have reported their 2023 NIBRS data to the FBI, which can be found in the NACJD NIBRS data extracts. Theoretically these numbers should be the same, however if there are differences the police department official publications will take precedence. 
+This means that sometimes there can be two sets of data for the same reporting year. For example, a given police department may have its own annual crime report for 2023 that is based on NIBRS, AND also have reported their 2023 NIBRS data to the FBI, which can be found in the NACJD NIBRS data extracts. Theoretically these numbers should be the same, however if there are differences, the police department official publications will take precedence. 
 
 Below is a list of respective data sources for each city. 
 
 ### 1. New York City, NY
 
-| Year(s)         | Reporting Format |             Source              |
-| :-----------    |   :-----------:  |          :-----------:          |
-| 2000-2023       | UCR              | [Historical NYC Crime Data](https://www.nyc.gov/site/nypd/stats/crime-statistics/historical.page)
+| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
+| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
+| 2000-2023       | UCR              | PD/City Publication | [Historical NYC Crime Data](https://www.nyc.gov/site/nypd/stats/crime-statistics/historical.page)
 
 ### 2. Los Angeles, CA
 
@@ -64,35 +64,35 @@ Very disappointingly, LAPD data was not available at the time of this analysis. 
 
 ### 3. Chicago, IL
 
-| Year(s)         | Reporting Format |             Source              |
-| :-----------    |   :-----------:  |          :-----------:          |
-| 2017-2023       | UCR              | [Annual Reports](https://home.chicagopolice.org/statistics-data/statistical-reports/annual-reports/)
-| 2016            | UCR              | [2017 Annual Report](https://home.chicagopolice.org/statistics-data/statistical-reports/annual-reports/), Page 17 "Index Crime Total" table (See note below)
-| 2012-2015       | UCR, Violent/Property Crime Totals Only | [2017 Annual Report](https://home.chicagopolice.org/statistics-data/statistical-reports/annual-reports/), Page 17 "Violent Crime Vs Property Crime 2012-2017" table (See note below)
+| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
+| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
+| 2017-2023       | UCR              | PD/City Publication | [Annual Reports](https://home.chicagopolice.org/statistics-data/statistical-reports/annual-reports/)
+| 2016            | UCR              | PD/City Publication | [2017 Annual Report](https://home.chicagopolice.org/statistics-data/statistical-reports/annual-reports/), Page 17 "Index Crime Total" table (See note below)
+| 2012-2015       | UCR, Violent/Property Crime Totals Only | PD/City Publication | [2017 Annual Report](https://home.chicagopolice.org/statistics-data/statistical-reports/annual-reports/), Page 17 "Violent Crime Vs Property Crime 2012-2017" table (See note below)
 
 For some reason annual reports for 2012-2016 are not available. There are some reporting of 2012-2016 data within the 2017 Annual Report, which was used as a substitute. 
 
 ### 4. Houston, TX
 
-| Year(s)         | Reporting Format |             Source             |
-| :-----------    |   :-----------:  |          :-----------:          |
-| 2019-2023       | NIBRS            | [Monthly Crime Data By Street and Police Beat](https://www.houstontx.gov/police/cs/Monthly_Crime_Data_by_Street_and_Police_Beat.htm)
-| 2012-2018       | UCR              | [Monthly Historical Files](https://www.houstontx.gov/police/cs/crime-stats-archives.htm)
+| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
+| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
+| 2019-2023       | NIBRS            | PD/City Publication | [Monthly Crime Data By Street and Police Beat](https://www.houstontx.gov/police/cs/Monthly_Crime_Data_by_Street_and_Police_Beat.htm)
+| 2012-2018       | UCR              | PD/City Publication | [Monthly Historical Files](https://www.houstontx.gov/police/cs/crime-stats-archives.htm)
 
 For information on how the differing reporting protocols were reconciled, see "Section III. About UCR-NIBRS + Bridging the Gap". 
 
 ### 5. Phoenix, AZ
 
-| Year(s)         | Reporting Format |             Source              |
-| :-----------    |   :-----------:  |          :-----------:          |
-| 2023            | UCR              | [Monthly Count of Actual Offenses Known to Police Part 1 Crimes 2023 YTD](https://www.phoenix.gov/policesite/Documents/Crime%20Stats%20and%20Maps/UCR%20Website%20December%202023.pdf). 
-| 2010-2022       | UCR              | [UCR SRS Annual Comparison](https://www.phoenix.gov/policesite/Documents/Crime%20Stats%20and%20Maps/UCR_2010-2022.pdf)
+| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
+| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
+| 2023            | UCR              | PD/City Publication | [Monthly Count of Actual Offenses Known to Police Part 1 Crimes 2023 YTD](https://www.phoenix.gov/policesite/Documents/Crime%20Stats%20and%20Maps/UCR%20Website%20December%202023.pdf). 
+| 2010-2022       | UCR              | PD/City Publication | [UCR SRS Annual Comparison](https://www.phoenix.gov/policesite/Documents/Crime%20Stats%20and%20Maps/UCR_2010-2022.pdf)
 
 ### 6. Philadephia, PA
 
-| Year(s)         | Reporting Format |             Source              |
-| :-----------    |   :-----------:  |          :-----------:          |
-| 2012-2023       | UCR              | [Crime Map and Stats](https://www.phillypolice.com/crimestats), "Latest Crime Stats Report" Section
+| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
+| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
+| 2012-2023       | UCR              | PD/City Publication | [Crime Map and Stats](https://www.phillypolice.com/crimestats), "Latest Crime Stats Report" Section
 
 The link to the Philadelphia PD crime data archive (which supposedly contains crime data from 2006-present) was not working when I checked. So instead I extracted data from the Year End Reports.
 
@@ -100,10 +100,10 @@ NOTE: Year End Reports were not available for 2012, 2013, 2020. Instead the late
 
 ### 7. San Antonio, TX
 
-| Year(s)         | Reporting Format |             Source              |
-| :-----------    |   :-----------:  |          :-----------:          |
-| 2022-2023       | NIBRS            | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128); Filtered for San Antonio only
-| 2011-2021       | UCR              | [sapd-ucrs-2011-2021.pdf](https://www.sa.gov/files/assets/main/v/1/sapd/sapd-ucrs-2011-2021.pdf). 
+| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
+| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
+| 2022-2023       | NIBRS            | NACJD NIBRS | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128)
+| 2011-2021       | UCR              | PD/City Publication | [sapd-ucrs-2011-2021.pdf](https://www.sa.gov/files/assets/main/v/1/sapd/sapd-ucrs-2011-2021.pdf). 
 
 For information on how the differing reporting protocols were reconciled, see "Section IV. Methodology". 
 
@@ -111,10 +111,10 @@ For additional verification of NIBRS data, official department publications of h
 
 ### 8. San Diego, CA
 
-| Year(s)         | Reporting Format |             Source              |
-| :-----------    |   :-----------:  |          :-----------:          |
-| 2023            | NIBRS            | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128); Filtered for San Antonio only
-| 2010-2022       | UCR              | [San Diego Historical Crime Actuals 1950-2022](https://www.sandiego.gov/sites/default/files/crime-actuals1950-2022.pdf). 
+| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
+| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
+| 2023            | NIBRS            |  NACJD NIBRS | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128)
+| 2010-2022       | UCR              | PD/City Publication | [San Diego Historical Crime Actuals 1950-2022](https://www.sandiego.gov/sites/default/files/crime-actuals1950-2022.pdf). 
 
 For information on how the differing reporting protocols were reconciled, see "Section IV. About UCR-NIBRS + Bridging the Gap". 
 
@@ -122,9 +122,9 @@ For additional verification of NIBRS data, official department publications of h
 
 ### 9. Dallas, TX
 
-| Year(s)         | Reporting Format |             Source              |
-| :-----------    |   :-----------:  |          :-----------:          |
-| 2010-2023       | NIBRS            | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128); Filtered for Dallas only
+| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
+| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
+| 2010-2023       | NIBRS            |  NACJD NIBRS |[Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128)
 
 --NEED TO CHECK--
 
@@ -134,32 +134,58 @@ Jacksonville Sheriff's Office does not provide data aggregates. Row-level UCR an
 
 ### 11. Austin, TX
 
-| Year(s)         | Reporting Format |             Source              |
-| :-----------    |   :-----------:  |          :-----------:          |
-| 2021-2023       | NIBRS            | [Crime Reports]([https://datahub.austintexas.gov/widgets/i7fg-wrk5?mobile_redirect=true)](https://data.austintexas.gov/Public-Safety/Crime-Reports/fdj4-gpfu/data_preview))
-| 2012-2020       | UCR              | [Crime Reports]([https://datahub.austintexas.gov/widgets/i7fg-wrk5?mobile_redirect=true)](https://data.austintexas.gov/Public-Safety/Crime-Reports/fdj4-gpfu/data_preview))
+| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
+| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
+| 2021-2023       | NIBRS            | PD/City Publication | [Crime Reports](https://datahub.austintexas.gov/widgets/i7fg-wrk5?mobile_redirect=true)
+| 2012-2020       | UCR              | PD/City Publication | [Crime Reports](https://datahub.austintexas.gov/widgets/i7fg-wrk5?mobile_redirect=true)
 
 For information on how the differing reporting protocols were reconciled, see "Section IV. Methodology". 
 
 ### 12. Fort Worth,TX
 
-| Year(s)         | Reporting Format |             Source              |
-| :-----------    |   :-----------:  |          :-----------:          |
-| 2010-2023       | NIBRS            | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128); Filtered for Dallas only
+| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
+| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
+| 2010-2023       | NIBRS            | NACJD NIBRS | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128)
 
 --NEED TO CHECK--
 
 ### 13. San Jose, CA
 
-SJPD uses UCR to report [annual crime stats](https://www.sjpd.org/records/crime-stats-maps/crime-statistics-annual) for 2013-2022, under Table 2. SJPD again [reports](https://www.sjpd.org/records/crime-stats-maps/crime-statistics-monthly) UCR for Jan - Mar 2023, but switches to NIBRS for April 2024 onwards. 
+| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
+| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
+| Apr2023-Dec2023       | NIBRS            | NACJD NIBRS | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128)
+| Jan2023-Mar2023 | UCR            | PD/City Publication | [Crime Statistics-Monthly](https://www.sjpd.org/records/crime-stats-maps/crime-statistics-monthly), "UCR Part One Reported Jan-Mar 2023" table
+| 2013-2022       | UCR            | PD/City Publication | [Annual Crime Stats](https://www.sjpd.org/records/crime-stats-maps/crime-statistics-annual), Table 2
+
+SJPD uses UCR to report  for 2013-2022, under Table 2. SJPD again  UCR for Jan - Mar 2023, but switches to NIBRS for April 2024 onwards. 
 
 ### 14. Columbus, OH
 
-Columbus crime stats uses UCR reporting and is available via the [OIBRS](https://dpsoibrspext.azurewebsites.net//). Data from 2010-2023 was pulled. 
+| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
+| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
+| 2010-2023       | UCR              | State Publication | [OIBRS](https://dpsoibrspext.azurewebsites.net//)
 
 ### 15. Charlotte, NC
 
-CMPD reports
+| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
+| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
+| 2023            | UCR              | PD/City Publication | [2023 End-of-Year Public Safety Report](https://www.charlottenc.gov/cmpd/News-Information/Newsroom/2023-End-of-Year-Public-Safety-Report#:~:text=Violent%20crimes%3A%207%2C221%20offenses%20in,compared%20to%20286%20in%202022.)
+| 2010-2022       | UCR              | State Publication | [Summary Statistics Report Viewer]((https://www.ncsbi.gov/SSRV?report=/UCR/IndexOffenses)
+
+### 16. Indianapolis, IN
+
+| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
+| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
+| 2010-2022       | UCR              | FBI | [Crime Data Explorer](https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/explorer/crime/crime-trend)
+
+### 17. San Francisco, CA
+
+| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
+| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
+| 2018-2023       | UCR              | PD/City Publication | [CompStat Reports](https://www.sanfranciscopolice.org/stay-safe/crime-data/crime-reports), December 2023 reports contain each year's YTD figures
+| 2013-2017       | UCR              | PD/City Publication | [CompStat Reports](https://www.sanfranciscopolice.org/sites/default/files/2018-11/SFPD-CompStat-YearEnd-2017.pdf), Page 2
+
+NOTE: Data for 2013-2017 are all derived from the 2017 Year End report. Specifically data for 2013-2016 uses the 2017 report as opposed to their own respective year's reporting because my impression is this data is more up to date because it lives in a more recent report.  
 
 
 ## IV. Methodology
