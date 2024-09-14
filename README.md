@@ -187,6 +187,23 @@ SJPD uses UCR to report  for 2013-2022, under Table 2. SJPD again  UCR for Jan -
 
 NOTE: Data for 2013-2017 are all derived from the 2017 Year End report. Specifically data for 2013-2016 uses the 2017 report as opposed to their own respective year's reporting because my impression is this data is more up to date because it lives in a more recent report.  
 
+### 18. Seattle, WA
+
+--NEEDS WORK--
+
+### 19. Denver, CO
+
+| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
+| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
+| 2023            | NIBRS (See note below)  | PD/City Publication | [Denver Overall Crime Dashboard](https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Police-Department/Crime-Information)
+| 2013-2022       | NIBRS (See note below)  | FBI | [Crime Data Explorer](https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/explorer/crime/crime-trend)
+
+NOTE: There are several sources that provide Denver crime statistics including the [Denver Overall Crime Dashboard](https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Police-Department/Crime-Information), the [FBI Crime Data Explorer](https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/explorer/crime/crime-trend), and the [Denver Crime Statistics Archive](https://www.denvergov.org/content/denvergov/en/police-department/crime-information/crime-statistics-maps/crime-statistics-archives.html). 
+
+The "/data/denver/denver_crime_comparison.xlsx" workbook makes a comparison of denver crime stats across these three different sources for 2019 (the only year where data was available from all three sources). The violent/property crime counts for each of these sources vary slightly. Because the FBI Crime Data Explorer contains the earliest data (up to 2022), this source was used along with the dashboard for 2023 data. Colorado law enforcement transitioned to NIBRS in 2013, so this was treated as the cutoff. 
+
+
+
 
 ## IV. Methodology
 
