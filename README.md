@@ -11,26 +11,26 @@ To get a general feel of what direction crime rates are moving in, I look at 10 
 
 The top 25 most populated cities in the U.S. according to [Wikipedia](https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population) were looked at as part of this analysis. See below for the listing:
 
-| City | 2023 Population Estimate |
-| :-----------    |   :-----------:  |
-| New York, NY | 8,258,035 |
-| Los Angeles, CA | 3,820,914 |
-| Chicago, IL | 2,664,452 |
-| Houston, TX | 2,314,157 |
-| Phoenix, AZ | 1,650,070 |
-| Philadelphia, PA | 1,550,542 |
-| San Antonio, TX | 1,495,295 |
-| San Diego, CA | 1,388,320 |
-| Dallas, TX | 1,302,868 |
-| Jacksonville, FL | 985,843 |
-| Austin, TX | 979,882 |
-| Fort Worth, TX | 978,468 |
-| San Jose, CA | 969,655 |
-| Columbus, OH | 913,175 |
-| Charlotte, NC | 911,311 |
-| Indianapolis, IN | 879,293 |
-| San Francisco, CA | 808,988 |
-| Seattle, WA | 755,078 |
+| City | 2023 Population Estimate | Source |
+| :-----------    |   :-----------:  |   :-----------:  |
+| New York, NY | 8,258,035 | [Historical NYC Crime Data](https://www.nyc.gov/site/nypd/stats/crime-statistics/historical.page) |
+| Los Angeles, CA | 3,820,914 | N/A [^1] |
+| Chicago, IL | 2,664,452 | [Annual Reports](https://home.chicagopolice.org/statistics-data/statistical-reports/annual-reports/)[^2] |
+| Houston, TX | 2,314,157 | 2019-2023 from [Monthly Crime Data By Street and Police Beat](https://www.houstontx.gov/police/cs/Monthly_Crime_Data_by_Street_and_Police_Beat.htm), 2012-2018 from [Monthly Historical Files](https://www.houstontx.gov/police/cs/crime-stats-archives.htm) |
+| Phoenix, AZ | 1,650,070 | 2023 from [Monthly Count of Actual Offenses Known to Police Part 1 Crimes 2023 YTD](https://www.phoenix.gov/policesite/Documents/Crime%20Stats%20and%20Maps/UCR%20Website%20December%202023.pdf), 2010-2022 from [UCR SRS Annual Comparison](https://www.phoenix.gov/policesite/Documents/Crime%20Stats%20and%20Maps/UCR_2010-2022.pdf) | 
+| Philadelphia, PA | 1,550,542 | [Crime Map and Stats](https://www.phillypolice.com/crimestats), "Latest Crime Stats Report" Section[^3] |
+| San Antonio, TX | 1,495,295 | 2022-2023 from [Crime Statistics 2022 vs 2023: January - December](https://www.sa.gov/files/assets/main/v/1/sapd/nibrs/crime-statistics-2022vs2023-jan-dec.pdf), 2011-2021 from [sapd-ucrs-2011-2021.pdf](https://www.sa.gov/files/assets/main/v/1/sapd/sapd-ucrs-2011-2021.pdf) |
+| San Diego, CA | 1,388,320 | 2023 from [Crime Against Persons January-December 2023](https://www.sandiego.gov/sites/default/files/2024-02/2023cumneighborhood.pdf), 2010-2022 from [San Diego Historical Crime Actuals 1950-2022](https://www.sandiego.gov/sites/default/files/crime-actuals1950-2022.pdf) |
+| Dallas, TX | 1,302,868 | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128) NEED TO CHECK |
+| Jacksonville, FL | 985,843 | NEED TO CHECK |
+| Austin, TX | 979,882 | 2021-2023 from [Crime Reports](https://datahub.austintexas.gov/widgets/i7fg-wrk5?mobile_redirect=true), 2012-202 from [Crime Reports](https://datahub.austintexas.gov/widgets/i7fg-wrk5?mobile_redirect=true) |
+| Fort Worth, TX | 978,468 | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128) NEED TO CHECK |
+| San Jose, CA | 969,655 | 2013-2022 from [Annual Crime Stats](https://www.sjpd.org/records/crime-stats-maps/crime-statistics-annual), Table 2 |
+| Columbus, OH | 913,175 | 2010-2023 from [OIBRS](https://dpsoibrspext.azurewebsites.net//) |
+| Charlotte, NC | 911,311 | 2023 from [2023 End-of-Year Public Safety Report](https://www.charlottenc.gov/cmpd/News-Information/Newsroom/2023-End-of-Year-Public-Safety-Report#:~:text=Violent%20crimes%3A%207%2C221%20offenses%20in,compared%20to%20286%20in%202022.), 2010-2022 from [Summary Statistics Report Viewer]((https://www.ncsbi.gov/SSRV?report=/UCR/IndexOffenses) |
+| Indianapolis, IN | 879,293 | 2010-2022 from [Crime Data Explorer](https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/explorer/crime/crime-trend)
+| San Francisco, CA | 808,988 | 2013-2023 from [CompStat Reports](https://www.sanfranciscopolice.org/stay-safe/crime-data/crime-reports), December 2023 reports contain each year's YTD figures[^4] |
+| Seattle, WA | 755,078 | NEED TO CHECK |
 | Denver, CO | 716,577 |
 | Oklahoma City, OK | 702,767 |
 | Nashville, TN | 687,788 |
@@ -39,6 +39,10 @@ The top 25 most populated cities in the U.S. according to [Wikipedia](https://en
 | Las Vegas, NV | 660,929 |
 | Boston, MA | 653,833 |
 
+[^1]: Very disappointingly, LAPD data was not available at the time of this analysis. Apparently there is an ongoing effort to overhaul their crime reporting systems, and for now the department has only posted very limited data (2022 onwards) to their website. For more information see the following [article](https://www.latimes.com/california/story/2024-06-07/lapd-crime-stats-disappear-records-overhaul).
+[^2]: For some reason annual reports for 2012-2016 are not available. There are some reporting of 2012-2016 data within the 2017 Annual Report, which was used as a substitute. 
+[^3]: The link to the Philadelphia PD crime data archive (which supposedly contains crime data from 2006-present) was not working when I checked. So instead I extracted data from the Year End Reports. Moreover, Year End Reports were not available for 2012, 2013, 2020. Instead the latest weekly report of each respective year was used, which contains cumulative YTD data. However, presumably due to reporting timelines, the cumulative YTD stats results in some cutoff. Thus 2012 stats report up to 12/30/2012, 2013 stats report up to 12/29/2013, and 2020 stats report up to 12/27/2020.
+[^4]: Data for 2013-2017 are all derived from the 2017 Year End report. Specifically data for 2013-2016 uses the 2017 report as opposed to their own respective year's reporting because my impression is this data is more up to date because it lives in a more recent report.  
 
 ## III. Raw Data Sources
 
@@ -52,144 +56,13 @@ This means that sometimes there can be two sets of data for the same reporting y
 
 Below is a list of respective data sources for each city. 
 
-### 1. New York City, NY
 
-| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
-| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
-| 2000-2023       | UCR SRS              | PD/City Publication | [Historical NYC Crime Data](https://www.nyc.gov/site/nypd/stats/crime-statistics/historical.page)
 
-### 2. Los Angeles, CA
 
-Very disappointingly, LAPD data was not available at the time of this analysis. Apparently there is an ongoing effort to overhaul their crime reporting systems, and for now the department has only posted very limited data (2022 onwards) to their website. For more information see the following [article](https://www.latimes.com/california/story/2024-06-07/lapd-crime-stats-disappear-records-overhaul).
 
-### 3. Chicago, IL
 
-| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
-| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
-| 2017-2023       | UCR SRS            | PD/City Publication | [Annual Reports](https://home.chicagopolice.org/statistics-data/statistical-reports/annual-reports/)
-| 2016            | UCR SRS             | PD/City Publication | [2017 Annual Report](https://home.chicagopolice.org/statistics-data/statistical-reports/annual-reports/), Page 17 "Index Crime Total" table (See note below)
-| 2012-2015       | UCR SRS, Violent/Property Crime Totals Only | PD/City Publication | [2017 Annual Report](https://home.chicagopolice.org/statistics-data/statistical-reports/annual-reports/), Page 17 "Violent Crime Vs Property Crime 2012-2017" table (See note below)
 
-For some reason annual reports for 2012-2016 are not available. There are some reporting of 2012-2016 data within the 2017 Annual Report, which was used as a substitute. 
 
-### 4. Houston, TX
-
-| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
-| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
-| 2019-2023       | NIBRS            | PD/City Publication | [Monthly Crime Data By Street and Police Beat](https://www.houstontx.gov/police/cs/Monthly_Crime_Data_by_Street_and_Police_Beat.htm)
-| 2012-2018       | UCR SRS              | PD/City Publication | [Monthly Historical Files](https://www.houstontx.gov/police/cs/crime-stats-archives.htm)
-
-For information on how the differing reporting protocols were reconciled, see "Section III. About UCR-NIBRS + Bridging the Gap". 
-
-### 5. Phoenix, AZ
-
-| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
-| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
-| 2023            | UCR SRS              | PD/City Publication | [Monthly Count of Actual Offenses Known to Police Part 1 Crimes 2023 YTD](https://www.phoenix.gov/policesite/Documents/Crime%20Stats%20and%20Maps/UCR%20Website%20December%202023.pdf). 
-| 2010-2022       | UCR SRS              | PD/City Publication | [UCR SRS Annual Comparison](https://www.phoenix.gov/policesite/Documents/Crime%20Stats%20and%20Maps/UCR_2010-2022.pdf)
-
-### 6. Philadephia, PA
-
-| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
-| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
-| 2012-2023       | UCR SRS              | PD/City Publication | [Crime Map and Stats](https://www.phillypolice.com/crimestats), "Latest Crime Stats Report" Section
-
-The link to the Philadelphia PD crime data archive (which supposedly contains crime data from 2006-present) was not working when I checked. So instead I extracted data from the Year End Reports.
-
-NOTE: Year End Reports were not available for 2012, 2013, 2020. Instead the latest weekly report of each respective year was used, which contains cumulative YTD data. However, presumably due to reporting timelines, the cumulative YTD stats results in some cutoff. Thus 2012 stats report up to 12/30/2012, 2013 stats report up to 12/29/2013, and 2020 stats report up to 12/27/2020. 
-
-### 7. San Antonio, TX
-
-| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
-| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
-| 2022-2023       | NIBRS            | NACJD NIBRS | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128)
-| 2011-2021       | UCR SRS              | PD/City Publication | [sapd-ucrs-2011-2021.pdf](https://www.sa.gov/files/assets/main/v/1/sapd/sapd-ucrs-2011-2021.pdf). 
-
-For information on how the differing reporting protocols were reconciled, see "Section IV. Methodology". 
-
-For additional verification of NIBRS data, official department publications of homicide data for 2022-2023 was taken from the [Crime Statistics 2022 vs 2023: January - December](https://www.sa.gov/files/assets/main/v/1/sapd/nibrs/crime-statistics-2022vs2023-jan-dec.pdf) report.
-
-### 8. San Diego, CA
-
-| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
-| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
-| 2023            | NIBRS            |  NACJD NIBRS | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128)
-| 2010-2022       | UCR SRS              | PD/City Publication | [San Diego Historical Crime Actuals 1950-2022](https://www.sandiego.gov/sites/default/files/crime-actuals1950-2022.pdf). 
-
-For information on how the differing reporting protocols were reconciled, see "Section IV. About UCR-NIBRS + Bridging the Gap". 
-
-For additional verification of NIBRS data, official department publications of homicide data for 2023 was taken from the [Crime Against Persons January-December 2023](https://www.sandiego.gov/sites/default/files/2024-02/2023cumneighborhood.pdf) report. 
-
-### 9. Dallas, TX
-
-| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
-| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
-| 2010-2023       | NIBRS            |  NACJD NIBRS |[Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128)
-
---NEED TO CHECK--
-
-### 10. Jacksonville, FL
-
-Jacksonville Sheriff's Office does not provide data aggregates. Row-level UCR and NIBRS data would presumably need to be downloaded and filtered from nationwide NIBRS. Due to storage limitations this cannot be done. 
-
-### 11. Austin, TX
-
-| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
-| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
-| 2021-2023       | NIBRS            | PD/City Publication | [Crime Reports](https://datahub.austintexas.gov/widgets/i7fg-wrk5?mobile_redirect=true)
-| 2012-2020       | UCR SRS              | PD/City Publication | [Crime Reports](https://datahub.austintexas.gov/widgets/i7fg-wrk5?mobile_redirect=true)
-
-For information on how the differing reporting protocols were reconciled, see "Section IV. Methodology". 
-
-### 12. Fort Worth,TX
-
-| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
-| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
-| 2010-2023       | NIBRS            | NACJD NIBRS | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128)
-
---NEED TO CHECK--
-
-### 13. San Jose, CA
-
-| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
-| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
-| Apr2023-Dec2023       | NIBRS            | NACJD NIBRS | [Download NIBRS data](https://www.icpsr.umich.edu/web/NACJD/series/128)
-| Jan2023-Mar2023 | UCR SRS            | PD/City Publication | [Crime Statistics-Monthly](https://www.sjpd.org/records/crime-stats-maps/crime-statistics-monthly), "UCR Part One Reported Jan-Mar 2023" table
-| 2013-2022       | UCR SRS           | PD/City Publication | [Annual Crime Stats](https://www.sjpd.org/records/crime-stats-maps/crime-statistics-annual), Table 2
-
-SJPD uses UCR to report  for 2013-2022, under Table 2. SJPD again  UCR for Jan - Mar 2023, but switches to NIBRS for April 2024 onwards. 
-
-### 14. Columbus, OH
-
-| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
-| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
-| 2010-2023       | UCR SRS              | State Publication | [OIBRS](https://dpsoibrspext.azurewebsites.net//)
-
-### 15. Charlotte, NC
-
-| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
-| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
-| 2023            | UCR SRS             | PD/City Publication | [2023 End-of-Year Public Safety Report](https://www.charlottenc.gov/cmpd/News-Information/Newsroom/2023-End-of-Year-Public-Safety-Report#:~:text=Violent%20crimes%3A%207%2C221%20offenses%20in,compared%20to%20286%20in%202022.)
-| 2010-2022       | UCR SRS              | State Publication | [Summary Statistics Report Viewer]((https://www.ncsbi.gov/SSRV?report=/UCR/IndexOffenses)
-
-### 16. Indianapolis, IN
-
-| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
-| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
-| 2010-2022       | UCR SRS             | FBI | [Crime Data Explorer](https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/explorer/crime/crime-trend)
-
-### 17. San Francisco, CA
-
-| Year(s) Pulled  | Reporting Format | Source Location |             Source              |
-| :-----------    |   :-----------:  |  :-----------:  |          :-----------:          |
-| 2018-2023       | UCR SRS              | PD/City Publication | [CompStat Reports](https://www.sanfranciscopolice.org/stay-safe/crime-data/crime-reports), December 2023 reports contain each year's YTD figures
-| 2013-2017       | UCR SRS              | PD/City Publication | [CompStat Reports](https://www.sanfranciscopolice.org/sites/default/files/2018-11/SFPD-CompStat-YearEnd-2017.pdf), Page 2
-
-NOTE: Data for 2013-2017 are all derived from the 2017 Year End report. Specifically data for 2013-2016 uses the 2017 report as opposed to their own respective year's reporting because my impression is this data is more up to date because it lives in a more recent report.  
-
-### 18. Seattle, WA
-
---NEEDS WORK--
 
 ### 19. Denver, CO
 
